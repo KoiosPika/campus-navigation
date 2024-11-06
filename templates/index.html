@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='map.jpg') }}" alt="Centered Image" class="map-image">
+        <div class="node" id="AD"></div>
+        <div class="node" id="AF"></div>
+        <div class="node" id="ASC"></div>
+        <div class="node" id="B"></div>
+        <div class="node" id="CC"></div>
+        <div class="node" id="CJ"></div>
+        <div class="node" id="CPAC"></div>
+        <div class="node" id="CS"></div>
+        <div class="node" id="CY"></div>
+        <div class="node" id="DBH"></div>
+        <div class="node" id="E"></div>
+        <div class="node" id="EC"></div>
+        <div class="node" id="ENPS"></div>
+        <div class="node" id="ESPS"></div>
+        <div class="node" id="GAH"></div>
+        <div class="node" id="GAS"></div>
+        <div class="node" id="GC"></div>
+        <div class="node" id="GF"></div>
+        <div class="node" id="GH"></div>
+        <div class="node" id="H"></div>
+        <div class="node" id="HRE"></div>
+        <div class="node" id="KHS"></div>
+        <div class="node" id="LH"></div>
+        <div class="node" id="MC"></div>
+        <div class="node" id="MH"></div>
+        <div class="node" id="MS"></div>
+        <div class="node" id="NPS"></div>
+        <div class="node" id="PL"></div>
+        <div class="node" id="RG"></div>
+        <div class="node" id="RH"></div>
+        <div class="node" id="SCPS"></div>
+        <div class="node" id="SGMH"></div>
+        <div class="node" id="SHCC"></div>
+        <div class="node" id="SRC"></div>
+        <div class="node" id="T"></div>
+        <div class="node" id="TG"></div>
+        <div class="node" id="TH"></div>
+        <div class="node" id="TS"></div>
+        <div class="node" id="TSC"></div>
+        <div class="node" id="TSF"></div>
+        <div class="node" id="TSU"></div>
+        <div class="node" id="TTC"></div>
+        <div class="node" id="TTF"></div>
+        <div class="node" id="UP"></div>
+        <div class="node" id="VA"></div>
+        <img src="{{ url_for('static', filename='person.svg') }}" id="icon" class="icon" alt="Person Icon">
+    </div>
+    <div class="wrapper">
+        <label for="start">Start Node:</label>
+        <select id="start">
+            <option value="AD">Admissions Office</option>
+            <option value="AF">Anderson Field</option>
+            <option value="ASC">Auxiliary Services Corporation</option>
+            <option value="B">Bookstore/Titan Shop</option>
+            <option value="CC">Children's Center</option>
+            <option value="CJ">Carl's Jr.</option>
+            <option value="CPAC">Clayes Performing Arts Center</option>
+            <option value="CS">Computer Science</option>
+            <option value="CY">Corporation Yard</option>
+            <option value="DBH">Dan Black Hall</option>
+            <option value="E">Engineering</option>
+            <option value="EC">Education Classroom</option>
+            <option value="ENPS">Eastside North Parking Structure</option>
+            <option value="ESPS">Eastside South Parking Structure</option>
+            <option value="GAH">Golleher Alumni House</option>
+            <option value="GAS">Gastronome</option>
+            <option value="GC">Greenhouse Complex</option>
+            <option value="GF">Goodwin Field</option>
+            <option value="GH">Gordon Hall</option>
+            <option value="H">Humanities/Social Sciences</option>
+            <option value="HRE">Housing & Residential Engagement</option>
+            <option value="KHS">Kinesiology & Health Sciences</option>
+            <option value="LH">Langsdorf Hall</option>
+            <option value="MC">Modular Complex</option>
+            <option value="MH">McCarthy Hall</option>
+            <option value="MS">Military Science</option>
+            <option value="NPS">Nutwood Parking Structure</option>
+            <option value="PL">Pollak Library</option>
+            <option value="RG">Ruby Gerontology Center</option>
+            <option value="RH">Resident Housing</option>
+            <option value="SCPS">State College Parking Structure</option>
+            <option value="SGMH">Steven G. Mihaylo Hall</option>
+            <option value="SHCC">Student Health & Counseling Center</option>
+            <option value="SRC">Student Recreation Center</option>
+            <option value="T">Titan House</option>
+            <option value="TG">Titan Gymnasium</option>
+            <option value="TH">Titan Hall</option>
+            <option value="TS">Titan Stadium</option>
+            <option value="TSC">Titan Sports Complex</option>
+            <option value="TSF">Titan Softball Field</option>
+            <option value="TSU">Titan Student Union</option>
+            <option value="TTC">Titan Tennis Courts</option>
+            <option value="TTF">Titan Track & Field</option>
+            <option value="UP">University Police</option>
+            <option value="VA">Visual Arts Center</option>
+        </select>
+
+        <label for="end">End Node:</label>
+        <select id="end">
+            <option value="AD">Admissions Office</option>
+            <option value="AF">Anderson Field</option>
+            <option value="ASC">Auxiliary Services Corporation</option>
+            <option value="B">Bookstore/Titan Shop</option>
+            <option value="CC">Children's Center</option>
+            <option value="CJ">Carl's Jr.</option>
+            <option value="CPAC">Clayes Performing Arts Center</option>
+            <option value="CS">Computer Science</option>
+            <option value="CY">Corporation Yard</option>
+            <option value="DBH">Dan Black Hall</option>
+            <option value="E">Engineering</option>
+            <option value="EC">Education Classroom</option>
+            <option value="ENPS">Eastside North Parking Structure</option>
+            <option value="ESPS">Eastside South Parking Structure</option>
+            <option value="GAH">Golleher Alumni House</option>
+            <option value="GAS">Gastronome</option>
+            <option value="GC">Greenhouse Complex</option>
+            <option value="GF">Goodwin Field</option>
+            <option value="GH">Gordon Hall</option>
+            <option value="H">Humanities/Social Sciences</option>
+            <option value="HRE">Housing & Residential Engagement</option>
+            <option value="KHS">Kinesiology & Health Sciences</option>
+            <option value="LH">Langsdorf Hall</option>
+            <option value="MC">Modular Complex</option>
+            <option value="MH">McCarthy Hall</option>
+            <option value="MS">Military Science</option>
+            <option value="NPS">Nutwood Parking Structure</option>
+            <option value="PL">Pollak Library</option>
+            <option value="RG">Ruby Gerontology Center</option>
+            <option value="RH">Resident Housing</option>
+            <option value="SCPS">State College Parking Structure</option>
+            <option value="SGMH">Steven G. Mihaylo Hall</option>
+            <option value="SHCC">Student Health & Counseling Center</option>
+            <option value="SRC">Student Recreation Center</option>
+            <option value="T">Titan House</option>
+            <option value="TG">Titan Gymnasium</option>
+            <option value="TH">Titan Hall</option>
+            <option value="TS">Titan Stadium</option>
+            <option value="TSC">Titan Sports Complex</option>
+            <option value="TSF">Titan Softball Field</option>
+            <option value="TSU">Titan Student Union</option>
+            <option value="TTC">Titan Tennis Courts</option>
+            <option value="TTF">Titan Track & Field</option>
+            <option value="UP">University Police</option>
+            <option value="VA">Visual Arts Center</option>
+        </select>
+
+        <span>Options</span>
+        <div class="option-list">
+            <button onclick="findPath('Dijkstra')">Run Dijkstra's</button>
+            <button onclick="findPath('DFS')">Run Depth First Search</button>
+            <button onclick="findPath('BFS')">Run Breadth First Search</button>
+        </div>
+
+        <!-- Display the path and distance -->
+        <!-- <div id="result">
+            <p>Distance: <span id="distance"></span></p>
+            <p>Path: <span id="path"></span></p>
+        </div> -->
+    </div>
+
+    <script>
+        async function findPath(algorithm) {
+            const start = document.getElementById('start').value;
+            const end = document.getElementById('end').value;
+
+            try {
+                const response = await fetch('/find_path', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ start: start, end: end, algorithm }),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                // document.getElementById('distance').innerText = data.distance;
+                // document.getElementById('path').innerText = data.path.join(" -> ");
+
+                // Call drawPath with the received path data
+                drawPath(data.path);
+
+                animateIconAlongPath(data.path);
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+
+
+        function drawPath(path) {
+            // Clear any previous lines
+            document.querySelectorAll('.path-line').forEach(line => line.remove());
+
+            // Draw a line between each pair of nodes in the path
+            for (let i = 0; i < path.length - 1; i++) {
+                const startNode = document.getElementById(path[i]);
+                const endNode = document.getElementById(path[i + 1]);
+
+                const line = document.createElement("div");
+                line.className = "path-line";
+
+                // Calculate the position and dimensions of the line
+                const startRect = startNode.getBoundingClientRect();
+                const endRect = endNode.getBoundingClientRect();
+
+                const x1 = startRect.left + startRect.width / 2;
+                const y1 = startRect.top + startRect.height / 2;
+                const x2 = endRect.left + endRect.width / 2;
+                const y2 = endRect.top + endRect.height / 2;
+
+                const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+                const angle = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI);
+
+                // Style the line
+                line.style.width = length + "px";
+                line.style.height = "5px"; // Thickness of the line
+                line.style.backgroundColor = "red"; // Color of the line
+                line.style.position = "absolute";
+                line.style.top = y1 + "px";
+                line.style.left = x1 + "px";
+                line.style.transform = `rotate(${angle}deg)`;
+                line.style.transformOrigin = "0 0"; // Anchor the line at the start point
+
+                // Append the line to the container or body
+                document.body.appendChild(line);
+            }
+        }
+
+        function animateIconAlongPath(path) {
+            const icon = document.getElementById('icon');
+            let index = 0;
+
+            // Set the initial position of the icon to the first node
+            function setPositionToNode(nodeId) {
+                const node = document.getElementById(nodeId);
+                const nodeRect = node.getBoundingClientRect();
+
+                // Calculate position relative to `.container` (or directly if positioned absolutely)
+                const x = nodeRect.left + nodeRect.width / 2 - icon.parentElement.getBoundingClientRect().left;
+                const y = nodeRect.top + nodeRect.height / 2 - icon.parentElement.getBoundingClientRect().top;
+            }
+
+            // Recursive function to move the icon from one node to the next
+            function moveToNextNode() {
+                if (index >= path.length - 1) return; // Stop if at the end of the path
+
+                const currentNode = path[index];
+                const nextNode = path[index + 1];
+
+                // Set the icon at the current node position
+                setPositionToNode(currentNode);
+
+                // Calculate the position for the next node
+                const nextNodeElement = document.getElementById(nextNode);
+                const nextRect = nextNodeElement.getBoundingClientRect();
+
+                const x2 = nextRect.left + nextRect.width / 2 - icon.parentElement.getBoundingClientRect().left;
+                const y2 = nextRect.top + nextRect.height / 2 - icon.parentElement.getBoundingClientRect().top;
+
+                // Set transition to smoothly move to the next node
+                icon.style.transition = "transform 0.5s linear"; // Adjust timing as needed
+                icon.style.transform = `translate(${x2}px, ${y2}px)`;
+
+                // Move to the next node after the transition duration
+                index++;
+                setTimeout(moveToNextNode, 500); // Ensure this matches the transition duration
+            }
+
+            // Start by setting the icon to the initial position, then move along the path
+            setPositionToNode(path[0]); // Set icon to start node position
+            setTimeout(moveToNextNode, 500); // Delay before starting movement
+        }
+
+    </script>
+</body>
+
+</html>

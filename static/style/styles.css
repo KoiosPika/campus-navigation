@@ -4,10 +4,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: linear-gradient(360deg, #e01212, #080682); /* Dark blue to light blue */
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px;
 }
 
 .container {
@@ -45,7 +53,7 @@ label {
     color: #ffffff;
     font-weight: 600;
     border: 3px solid white;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 5px 10px;
     background-color: #00008b;
 }
@@ -60,6 +68,7 @@ select {
 
 option {
     background-color: #005e8b;
+    border-radius: 10px;
 }
 
 button {
@@ -71,6 +80,10 @@ button {
     width: 100%;
     font-weight: 600;
     cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0e107e, #4a1b88);
 }
 
 span {

@@ -8,166 +8,178 @@
 </head>
 
 <body>
-    <div class="container">
-        <img src="{{ url_for('static', filename='map.jpg') }}" alt="Centered Image" class="map-image">
-        <div class="node" id="AD"></div>
-        <div class="node" id="AF"></div>
-        <div class="node" id="ASC"></div>
-        <div class="node" id="B"></div>
-        <div class="node" id="CC"></div>
-        <div class="node" id="CJ"></div>
-        <div class="node" id="CPAC"></div>
-        <div class="node" id="CS"></div>
-        <div class="node" id="CY"></div>
-        <div class="node" id="DBH"></div>
-        <div class="node" id="E"></div>
-        <div class="node" id="EC"></div>
-        <div class="node" id="ENPS"></div>
-        <div class="node" id="ESPS"></div>
-        <div class="node" id="GAH"></div>
-        <div class="node" id="GAS"></div>
-        <div class="node" id="GC"></div>
-        <div class="node" id="GF"></div>
-        <div class="node" id="GH"></div>
-        <div class="node" id="H"></div>
-        <div class="node" id="HRE"></div>
-        <div class="node" id="KHS"></div>
-        <div class="node" id="LH"></div>
-        <div class="node" id="MC"></div>
-        <div class="node" id="MH"></div>
-        <div class="node" id="MS"></div>
-        <div class="node" id="NPS"></div>
-        <div class="node" id="PL"></div>
-        <div class="node" id="RG"></div>
-        <div class="node" id="RH"></div>
-        <div class="node" id="SCPS"></div>
-        <div class="node" id="SGMH"></div>
-        <div class="node" id="SHCC"></div>
-        <div class="node" id="SRC"></div>
-        <div class="node" id="T"></div>
-        <div class="node" id="TG"></div>
-        <div class="node" id="TH"></div>
-        <div class="node" id="TS"></div>
-        <div class="node" id="TSC"></div>
-        <div class="node" id="TSF"></div>
-        <div class="node" id="TSU"></div>
-        <div class="node" id="TTC"></div>
-        <div class="node" id="TTF"></div>
-        <div class="node" id="UP"></div>
-        <div class="node" id="VA"></div>
-        <img src="{{ url_for('static', filename='person.svg') }}" id="icon" class="icon" alt="Person Icon">
-    </div>
-    <div class="wrapper">
-        <label for="start">Start Node:</label>
-        <select id="start">
-            <option value="AD">Admissions Office</option>
-            <option value="AF">Anderson Field</option>
-            <option value="ASC">Auxiliary Services Corporation</option>
-            <option value="B">Bookstore/Titan Shop</option>
-            <option value="CC">Children's Center</option>
-            <option value="CJ">Carl's Jr.</option>
-            <option value="CPAC">Clayes Performing Arts Center</option>
-            <option value="CS">Computer Science</option>
-            <option value="CY">Corporation Yard</option>
-            <option value="DBH">Dan Black Hall</option>
-            <option value="E">Engineering</option>
-            <option value="EC">Education Classroom</option>
-            <option value="ENPS">Eastside North Parking Structure</option>
-            <option value="ESPS">Eastside South Parking Structure</option>
-            <option value="GAH">Golleher Alumni House</option>
-            <option value="GAS">Gastronome</option>
-            <option value="GC">Greenhouse Complex</option>
-            <option value="GF">Goodwin Field</option>
-            <option value="GH">Gordon Hall</option>
-            <option value="H">Humanities/Social Sciences</option>
-            <option value="HRE">Housing & Residential Engagement</option>
-            <option value="KHS">Kinesiology & Health Sciences</option>
-            <option value="LH">Langsdorf Hall</option>
-            <option value="MC">Modular Complex</option>
-            <option value="MH">McCarthy Hall</option>
-            <option value="MS">Military Science</option>
-            <option value="NPS">Nutwood Parking Structure</option>
-            <option value="PL">Pollak Library</option>
-            <option value="RG">Ruby Gerontology Center</option>
-            <option value="RH">Resident Housing</option>
-            <option value="SCPS">State College Parking Structure</option>
-            <option value="SGMH">Steven G. Mihaylo Hall</option>
-            <option value="SHCC">Student Health & Counseling Center</option>
-            <option value="SRC">Student Recreation Center</option>
-            <option value="T">Titan House</option>
-            <option value="TG">Titan Gymnasium</option>
-            <option value="TH">Titan Hall</option>
-            <option value="TS">Titan Stadium</option>
-            <option value="TSC">Titan Sports Complex</option>
-            <option value="TSF">Titan Softball Field</option>
-            <option value="TSU">Titan Student Union</option>
-            <option value="TTC">Titan Tennis Courts</option>
-            <option value="TTF">Titan Track & Field</option>
-            <option value="UP">University Police</option>
-            <option value="VA">Visual Arts Center</option>
-        </select>
-
-        <label for="end">End Node:</label>
-        <select id="end">
-            <option value="AD">Admissions Office</option>
-            <option value="AF">Anderson Field</option>
-            <option value="ASC">Auxiliary Services Corporation</option>
-            <option value="B">Bookstore/Titan Shop</option>
-            <option value="CC">Children's Center</option>
-            <option value="CJ">Carl's Jr.</option>
-            <option value="CPAC">Clayes Performing Arts Center</option>
-            <option value="CS">Computer Science</option>
-            <option value="CY">Corporation Yard</option>
-            <option value="DBH">Dan Black Hall</option>
-            <option value="E">Engineering</option>
-            <option value="EC">Education Classroom</option>
-            <option value="ENPS">Eastside North Parking Structure</option>
-            <option value="ESPS">Eastside South Parking Structure</option>
-            <option value="GAH">Golleher Alumni House</option>
-            <option value="GAS">Gastronome</option>
-            <option value="GC">Greenhouse Complex</option>
-            <option value="GF">Goodwin Field</option>
-            <option value="GH">Gordon Hall</option>
-            <option value="H">Humanities/Social Sciences</option>
-            <option value="HRE">Housing & Residential Engagement</option>
-            <option value="KHS">Kinesiology & Health Sciences</option>
-            <option value="LH">Langsdorf Hall</option>
-            <option value="MC">Modular Complex</option>
-            <option value="MH">McCarthy Hall</option>
-            <option value="MS">Military Science</option>
-            <option value="NPS">Nutwood Parking Structure</option>
-            <option value="PL">Pollak Library</option>
-            <option value="RG">Ruby Gerontology Center</option>
-            <option value="RH">Resident Housing</option>
-            <option value="SCPS">State College Parking Structure</option>
-            <option value="SGMH">Steven G. Mihaylo Hall</option>
-            <option value="SHCC">Student Health & Counseling Center</option>
-            <option value="SRC">Student Recreation Center</option>
-            <option value="T">Titan House</option>
-            <option value="TG">Titan Gymnasium</option>
-            <option value="TH">Titan Hall</option>
-            <option value="TS">Titan Stadium</option>
-            <option value="TSC">Titan Sports Complex</option>
-            <option value="TSF">Titan Softball Field</option>
-            <option value="TSU">Titan Student Union</option>
-            <option value="TTC">Titan Tennis Courts</option>
-            <option value="TTF">Titan Track & Field</option>
-            <option value="UP">University Police</option>
-            <option value="VA">Visual Arts Center</option>
-        </select>
-
-        <span>Options</span>
-        <div class="option-list">
-            <button onclick="findPath('Dijkstra')">Run Dijkstra's</button>
-            <button onclick="findPath('DFS')">Run Depth First Search</button>
-            <button onclick="findPath('BFS')">Run Breadth First Search</button>
+    <div class="main">
+        <div class="container">
+            <img src="{{ url_for('static', filename='map.jpg') }}" alt="Centered Image" class="map-image">
+            <div class="node" id="AD"></div>
+            <div class="node" id="AF"></div>
+            <div class="node" id="ASC"></div>
+            <div class="node" id="B"></div>
+            <div class="node" id="CC"></div>
+            <div class="node" id="CJ"></div>
+            <div class="node" id="CPAC"></div>
+            <div class="node" id="CS"></div>
+            <div class="node" id="CY"></div>
+            <div class="node" id="DBH"></div>
+            <div class="node" id="E"></div>
+            <div class="node" id="EC"></div>
+            <div class="node" id="ENPS"></div>
+            <div class="node" id="ESPS"></div>
+            <div class="node" id="GAH"></div>
+            <div class="node" id="GAS"></div>
+            <div class="node" id="GC"></div>
+            <div class="node" id="GF"></div>
+            <div class="node" id="GH"></div>
+            <div class="node" id="H"></div>
+            <div class="node" id="HRE"></div>
+            <div class="node" id="KHS"></div>
+            <div class="node" id="LH"></div>
+            <div class="node" id="MC"></div>
+            <div class="node" id="MH"></div>
+            <div class="node" id="MS"></div>
+            <div class="node" id="NPS"></div>
+            <div class="node" id="PL"></div>
+            <div class="node" id="RG"></div>
+            <div class="node" id="RH"></div>
+            <div class="node" id="SCPS"></div>
+            <div class="node" id="SGMH"></div>
+            <div class="node" id="SHCC"></div>
+            <div class="node" id="SRC"></div>
+            <div class="node" id="T"></div>
+            <div class="node" id="TG"></div>
+            <div class="node" id="TH"></div>
+            <div class="node" id="TS"></div>
+            <div class="node" id="TSC"></div>
+            <div class="node" id="TSF"></div>
+            <div class="node" id="TSU"></div>
+            <div class="node" id="TTC"></div>
+            <div class="node" id="TTF"></div>
+            <div class="node" id="UP"></div>
+            <div class="node" id="VA"></div>
+            <img src="{{ url_for('static', filename='person.png') }}" id="icon" class="icon" alt="Person Icon">
         </div>
+        <div class="wrapper">
+            <label for="start">Start Node:</label>
+            <select id="start">
+                <option value="AD">Admissions Office</option>
+                <option value="AF">Anderson Field</option>
+                <option value="ASC">Auxiliary Services Corporation</option>
+                <option value="B">Bookstore/Titan Shop</option>
+                <option value="CC">Children's Center</option>
+                <option value="CJ">Carl's Jr.</option>
+                <option value="CPAC">Clayes Performing Arts Center</option>
+                <option value="CS">Computer Science</option>
+                <option value="CY">Corporation Yard</option>
+                <option value="DBH">Dan Black Hall</option>
+                <option value="E">Engineering</option>
+                <option value="EC">Education Classroom</option>
+                <option value="ENPS">Eastside North Parking Structure</option>
+                <option value="ESPS">Eastside South Parking Structure</option>
+                <option value="GAH">Golleher Alumni House</option>
+                <option value="GAS">Gastronome</option>
+                <option value="GC">Greenhouse Complex</option>
+                <option value="GF">Goodwin Field</option>
+                <option value="GH">Gordon Hall</option>
+                <option value="H">Humanities/Social Sciences</option>
+                <option value="HRE">Housing & Residential Engagement</option>
+                <option value="KHS">Kinesiology & Health Sciences</option>
+                <option value="LH">Langsdorf Hall</option>
+                <option value="MC">Modular Complex</option>
+                <option value="MH">McCarthy Hall</option>
+                <option value="MS">Military Science</option>
+                <option value="NPS">Nutwood Parking Structure</option>
+                <option value="PL">Pollak Library</option>
+                <option value="RG">Ruby Gerontology Center</option>
+                <option value="RH">Resident Housing</option>
+                <option value="SCPS">State College Parking Structure</option>
+                <option value="SGMH">Steven G. Mihaylo Hall</option>
+                <option value="SHCC">Student Health & Counseling Center</option>
+                <option value="SRC">Student Recreation Center</option>
+                <option value="T">Titan House</option>
+                <option value="TG">Titan Gymnasium</option>
+                <option value="TH">Titan Hall</option>
+                <option value="TS">Titan Stadium</option>
+                <option value="TSC">Titan Sports Complex</option>
+                <option value="TSF">Titan Softball Field</option>
+                <option value="TSU">Titan Student Union</option>
+                <option value="TTC">Titan Tennis Courts</option>
+                <option value="TTF">Titan Track & Field</option>
+                <option value="UP">University Police</option>
+                <option value="VA">Visual Arts Center</option>
+            </select>
 
-        <!-- Display the path and distance -->
-        <!-- <div id="result">
-            <p>Distance: <span id="distance"></span></p>
-            <p>Path: <span id="path"></span></p>
-        </div> -->
+            <label for="end">End Node:</label>
+            <select id="end">
+                <option value="AD">Admissions Office</option>
+                <option value="AF">Anderson Field</option>
+                <option value="ASC">Auxiliary Services Corporation</option>
+                <option value="B">Bookstore/Titan Shop</option>
+                <option value="CC">Children's Center</option>
+                <option value="CJ">Carl's Jr.</option>
+                <option value="CPAC">Clayes Performing Arts Center</option>
+                <option value="CS">Computer Science</option>
+                <option value="CY">Corporation Yard</option>
+                <option value="DBH">Dan Black Hall</option>
+                <option value="E">Engineering</option>
+                <option value="EC">Education Classroom</option>
+                <option value="ENPS">Eastside North Parking Structure</option>
+                <option value="ESPS">Eastside South Parking Structure</option>
+                <option value="GAH">Golleher Alumni House</option>
+                <option value="GAS">Gastronome</option>
+                <option value="GC">Greenhouse Complex</option>
+                <option value="GF">Goodwin Field</option>
+                <option value="GH">Gordon Hall</option>
+                <option value="H">Humanities/Social Sciences</option>
+                <option value="HRE">Housing & Residential Engagement</option>
+                <option value="KHS">Kinesiology & Health Sciences</option>
+                <option value="LH">Langsdorf Hall</option>
+                <option value="MC">Modular Complex</option>
+                <option value="MH">McCarthy Hall</option>
+                <option value="MS">Military Science</option>
+                <option value="NPS">Nutwood Parking Structure</option>
+                <option value="PL">Pollak Library</option>
+                <option value="RG">Ruby Gerontology Center</option>
+                <option value="RH">Resident Housing</option>
+                <option value="SCPS">State College Parking Structure</option>
+                <option value="SGMH">Steven G. Mihaylo Hall</option>
+                <option value="SHCC">Student Health & Counseling Center</option>
+                <option value="SRC">Student Recreation Center</option>
+                <option value="T">Titan House</option>
+                <option value="TG">Titan Gymnasium</option>
+                <option value="TH">Titan Hall</option>
+                <option value="TS">Titan Stadium</option>
+                <option value="TSC">Titan Sports Complex</option>
+                <option value="TSF">Titan Softball Field</option>
+                <option value="TSU">Titan Student Union</option>
+                <option value="TTC">Titan Tennis Courts</option>
+                <option value="TTF">Titan Track & Field</option>
+                <option value="UP">University Police</option>
+                <option value="VA">Visual Arts Center</option>
+            </select>
+
+            <span>Options</span>
+            <div class="option-list">
+                <button onclick="findPath('Dijkstra')">Run Dijkstra's</button>
+                <button onclick="findPath('DFS')">Run Depth First Search</button>
+                <button onclick="findPath('BFS')">Run Breadth First Search</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="result">
+        <table id="result-table">
+            <tr>
+                <th>Node</th>
+                <th>Total Distance</th>
+                <th>Total Time</th>
+            </tr>
+            <tr>
+                <td id="path-nodes"></td>
+                <td id="total-distance"></td>
+                <td id="total-time"></td>
+            </tr>
+        </table>
     </div>
 
     <script>
@@ -189,8 +201,9 @@
                 }
 
                 const data = await response.json();
-                // document.getElementById('distance').innerText = data.distance;
-                // document.getElementById('path').innerText = data.path.join(" -> ");
+                document.getElementById('path-nodes').innerText = data.path.join(" -> ");
+                document.getElementById('total-distance').innerText = data.distance;
+                document.getElementById('total-time').innerText = data.time;
 
                 // Call drawPath with the received path data
                 drawPath(data.path);
@@ -229,7 +242,7 @@
                 // Style the line
                 line.style.width = length + "px";
                 line.style.height = "5px"; // Thickness of the line
-                line.style.backgroundColor = "red"; // Color of the line
+                line.style.background = "red"; // Color of the line
                 line.style.position = "absolute";
                 line.style.top = y1 + "px";
                 line.style.left = x1 + "px";
@@ -283,7 +296,7 @@
 
             // Start by setting the icon to the initial position, then move along the path
             setPositionToNode(path[0]); // Set icon to start node position
-            setTimeout(moveToNextNode, 500); // Delay before starting movement
+            setTimeout(moveToNextNode, 250); // Delay before starting movement
         }
 
     </script>

@@ -18,6 +18,30 @@ body {
     margin: 10px 30px;
 }
 
+#result-table {
+    width: 700px;
+    border-collapse: separate; /* Allows border-radius to be applied */
+    border-spacing: 0; /* Removes extra space between cells */
+    margin: 20px auto;
+    border: 1px solid gray; /* Adds border around the table */
+    border-radius: 10px; /* Rounds the four corners */
+    overflow: hidden; /* Clips cell borders inside rounded corners */
+}
+
+#result-table th, #result-table td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+#result-table th {
+    background-color: #dbd7d7;
+}
+
+#result-table td {
+    background-color: #f0f0f0;
+}
+
 .container {
     text-align: center;
     position: relative;

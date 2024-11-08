@@ -169,12 +169,12 @@
 
     <div id="result">
         <table id="result-table">
-            <tr>
-                <th>Node</th>
+            <tr id="upper-row">
+                <th>From -> To</th>
                 <th>Total Distance</th>
                 <th>Total Time</th>
             </tr>
-            <tr>
+            <tr id="lower-row">
                 <td id="path-nodes"></td>
                 <td id="total-distance"></td>
                 <td id="total-time"></td>
@@ -201,9 +201,9 @@
                 }
 
                 const data = await response.json();
-                document.getElementById('path-nodes').innerText = data.path.join(" -> ");
-                document.getElementById('total-distance').innerText = data.distance;
-                document.getElementById('total-time').innerText = data.time;
+                document.getElementById('path-nodes').innerText = data.path[0] + " -> " + data.path[data.path.length - 1];
+                document.getElementById('total-distance').innerText = data.distance + " Miles";
+                document.getElementById('total-time').innerText = data.time + " Minutes";
 
                 // Call drawPath with the received path data
                 drawPath(data.path);

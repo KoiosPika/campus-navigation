@@ -20,7 +20,8 @@ def create_graph():
             "SRC": {"distance": 384, "time": 2, "accessibility": True}},
         "CC" : {
             "TS": {"distance": 1056, "time": 5, "accessibility": True}, 
-            "TTF": {"distance": 2112, "time": 9, "accessibility": True}},
+            "TTF": {"distance": 2112, "time": 9, "accessibility": True},
+            "TTC": { "distance": 2112, "time" : 9, "accessibility" : True}},
         "CPAC" : {
             "B": {"distance": 1056, "time": 4, "accessibility": True}, 
             "PL": {"distance": 1056, "time": 5, "accessibility": True}, 
@@ -314,9 +315,9 @@ def dfs(graph, start, destination, path=None, visited=None):
     
     for neighbor in graph.get(start, {}):
         if neighbor not in visited:
-            result = dfs(graph, neighbor, destination, path + [neighbor], visited)
-            if result:
-                return result
+            total_distance, total_time, found_path = dfs(graph, neighbor, destination, path + [neighbor], visited)
+            if found_path:
+                return total_distance, total_time, found_path
     return None, None, []
 
 @app.route('/')
